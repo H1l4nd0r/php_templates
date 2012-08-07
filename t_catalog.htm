@@ -1,0 +1,75 @@
+
+<t:path>
+<div id="path">
+<span>
+<t:cat>&bull;&nbsp;<a href="?page={page}&cat={id}">{title}</a>&nbsp;</t:cat></span>
+</div>
+
+</t:path>
+
+<t:categories>
+<t:menulevel>
+<t:start><div id="categorieslist"></t:start>
+<t:item>
+<div class="category">
+	<t:active>
+    <a class="activemenuitem" href="{link}">{title}<br/>
+    <t:picture><br/><img src="{path}"/></t:picture></a>
+    </t:active>
+    <t:inactive>
+    <a href="{link}">{title}<br/>
+    <t:picture><br/><img src="{path}"/></t:picture></a>
+    </t:inactive>
+
+</div>
+    </t:item>
+<t:end></div></t:end>
+</t:menulevel>
+</t:categories>
+
+
+<t:items>
+
+    <div id="itemslist">
+<t:item>
+<t:active>
+    <div class="catalogitem"><a href="{link}"><img src="{thumbpath}"/><br/><br/>{title}</a><br/><br/><br/><br/></div></t:active>
+	<t:inactive>
+    <div class="catalogitem"><a href="{link}"><img src="{thumbpath}"/><br/><br/>{title}</a><br/><br/><br/><br/></div></t:inactive>
+    </t:item>
+    <t:pages><tr><td>страницы:
+		<t:page><a href="/?pageInd={pageInd}&cat={catid}" <t:current>class="selectedPage"</t:current>>&nbsp;&nbsp;{pageNum}</a></t:page>
+		</td></tr>
+	</t:pages>
+	</div>
+</t:items>
+
+<t:item>
+	<div id="itemdescription">
+		<div id="itemtitle">{title}</div>
+		<div id="itempictures">
+			<t:slideshow>
+				<script>
+					var currItemPictures = [{pictures}];
+					var currItemPicturesPos = 0;
+					var currItemPicturesLocation = '{picturesLocation}';
+				</script>
+				<!--<a href="javascript:prevPic('screen');">предыдущая картинка&nbsp;&lt;&lt;</a>&nbsp;&nbsp;&nbsp;<a href="javascript:nextPic('screen');">&gt;&gt;&nbsp;следующая картинка</a><br/><br/>-->
+				<img id="screen" src="{path}" alt="{title}">
+				<script>
+					var toScreen = top.document.getElementById('screen');
+					toScreen.src = currItemPicturesLocation + currItemPictures[currItemPicturesPos];
+				</script>
+			</t:slideshow>
+				<div id="itempicturesall"><t:picture><img src="{path}" alt="{title}"/><br><br></t:picture></div>
+			</div>
+		{description}
+	</div>
+
+</t:item>
+
+
+<t:essentialitems>
+    <!-- Essential items -->
+    <t:eitem><a href="{link}"><span><img style="margin:5px;border:none;" width="110" src="{thumbpath}" alt="{title}"/>{title}</span></a></t:eitem>
+    </t:essentialitems>
