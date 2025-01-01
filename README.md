@@ -2,8 +2,10 @@
 
 Allows easily use templates in php for just any text content - html,css whatever, using your own tags structure
 
-**Usage**
+**Usage:**
 
+
+**Code:**
 
 $tmpl =  'path to file';
 $page = tmpl_use($tmpl);
@@ -16,12 +18,11 @@ tmpl_respawn(
         
 echo glue(page);
 
+**Template for this code:**
 
-Template for this code
-
-<h1>sometitle</h1>
+<p>sometitle</p>
 [t:tag]
-<h1>sometext</h1>
+<p>sometext</p>
 [t:subitem]
 text {somevar} text  text  text 
 [/t:subitem]
