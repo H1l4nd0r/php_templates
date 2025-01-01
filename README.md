@@ -2,18 +2,28 @@
 
 Allows easily use templates in php for just any text content - html,css whatever, using your own tags structure
 
-Usage
+**Usage**
+
 
 $tmpl =  'path to file';
 $page = tmpl_use($tmpl);
 
-tmpl_respawn(page, '/dashboard/persacc', [ 
-      'accno' => $persacc, 
-      'debt' => ceil($data['resdata']['result']['dolg'])??0,
-      'address' => $data['resdata']['result']['address']??0,
-      's_all' => $data['resdata']['result']['s_all']??0,
-      'purpose' => 'Оплата коммунальных услуг'
-  ] );
-
+tmpl_respawn(
+      page, 
+      '/tag/subitem', 
+      [ 'somevar' => $persacc ] 
+);
         
 echo glue(page);
+
+
+Template for this code
+
+<h1>sometitle</h1>
+[t:tag]
+<h1>sometext</h1>
+[t:subitem]
+text {somevar} text  text  text 
+[/t:subitem]
+
+[/t:tag]
