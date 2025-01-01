@@ -21,16 +21,7 @@ tmpl_respawn(
 echo glue(page);
 
 **oop approache //////////////////////////**
-$tmpl =  'path to file';
-$page = tmpl_use($tmpl);
-
-tmpl_respawn(
-      page, 
-      '/tag/subitem', 
-      [ 'somevar' => $persacc ] 
-);
-        
-echo glue(page);
+will be added later, currently depends on DI container
 
 
 **Template for this code:**
