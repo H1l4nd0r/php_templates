@@ -15,12 +15,12 @@ $tmpl =  'path to file';
 $page = tmpl_use($tmpl);
 
 tmpl_respawn(
-      page, 
+      $page, 
       '/tag/subitem', 
       [ 'somevar' => $persacc ] 
 );
         
-echo glue(page);
+echo glue($page);
 
 **oop approache //////////////////////////**
 will be added later, currently depends on DI container
