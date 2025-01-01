@@ -9,6 +9,8 @@ Allows easily use templates in php for just any text content - html,css whatever
 **Code:**
 **functional approache //////////////////////////**
 
+require_once('lib_templates.php);
+
 $tmpl =  'path to file';
 $page = tmpl_use($tmpl);
 
