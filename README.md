@@ -5,6 +5,7 @@ Allows easily use templates in php for just any text content - html,css whatever
 **Usage:**
 
 
+
 **Code:**
 
 $tmpl =  'path to file';
@@ -17,6 +18,8 @@ tmpl_respawn(
 );
         
 echo glue(page);
+
+
 
 **Template for this code:**
 
